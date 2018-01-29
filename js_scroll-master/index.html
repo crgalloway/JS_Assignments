@@ -32,8 +32,15 @@
 
 		function updateText()
 		{
+			if(words[word_counter][character_counter]==" "){
+				// console.log("i got here");
+				// el.innerHTML = "'' & nbsp";
+				el.innerHTML += '&nbsp';
+				character_counter++;
+			}
+			else{
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
-
+			}
 			if(character_counter == words[word_counter].length+1)
 			{
 				word_counter++; 	//choose a different word
